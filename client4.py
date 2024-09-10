@@ -4,7 +4,7 @@ import asyncio
 import websockets
 import base64
 from deepface import DeepFace
-from datetime import datetime, timedelta
+from datetime import datetime
 from collections import Counter
 import time
 import csv
@@ -22,7 +22,7 @@ def save_to_csv(data, filename):
         print(f"Error writing to CSV: {e}")
 
 # Initialize camera with index 2
-camera_index = 2
+camera_index = 0
 cap = cv2.VideoCapture(camera_index)
 
 # Initialize background removal
@@ -108,33 +108,58 @@ def log_time_out(face_id):
 def get_current_time():
     return datetime.now()
 
-def enhance_edges(foreground, background):
-    """Enhance the edges of the foreground subject and blend smoothly with background."""
-    gray_foreground = cv2.cvtColor(foreground, cv2.COLOR_BGR2GRAY)
-    bilateral_filtered = cv2.bilateralFilter(gray_foreground, 9, 75, 75)
-    edges = cv2.Canny(bilateral_filtered, 50, 150)
-    edge_mask = np.zeros_like(foreground, dtype=np.uint8)
-    edge_mask[edges != 0] = [0, 0, 0]
-    dilated_edges = cv2.dilate(edges, np.ones((5, 5), np.uint8), iterations=1)
-    edge_mask = np.zeros_like(foreground, dtype=np.uint8)
-    edge_mask[dilated_edges != 0] = [0, 0, 0]
-    edge_mask = cv2.GaussianBlur(edge_mask, (15, 15), 0)
-    foreground = cv2.addWeighted(foreground, 1.0, edge_mask, 0.4, 0)
-    alpha = 0.5
-    blended_image = cv2.addWeighted(foreground, alpha, background, 1 - alpha, 0)
-    return blended_image
+# Function to apply green background
+def apply_green_background(segmentated_img, original_frame):
+    """Applies a green background where the background has been removed, with smooth and seamless edges."""
+    # Define the green background color
+    green_background = np.zeros_like(original_frame, dtype=np.uint8)
+    green_background[:] = (0, 255, 0)  # RGB for green
 
-def correct_green_tint(frame):
-    """Correct greenish tint in the frame."""
-    frame_float = frame.astype(np.float32)
-    b_mean = np.mean(frame_float[:, :, 0])
-    g_mean = np.mean(frame_float[:, :, 1])
-    r_mean = np.mean(frame_float[:, :, 2])
-    green_correction = (g_mean - b_mean) * 0.5
-    frame_float[:, :, 1] -= green_correction
-    frame_float = np.clip(frame_float, 0, 255)
-    frame_corrected = frame_float.astype(np.uint8)
-    return frame_corrected
+    # Create a mask where the background is removed
+    mask = cv2.cvtColor(segmentated_img, cv2.COLOR_BGR2GRAY)
+    _, mask = cv2.threshold(mask, 1, 255, cv2.THRESH_BINARY)
+
+    # Smooth the mask using erosion followed by dilation (morphological opening)
+    kernel = np.ones((5, 5), np.uint8)
+    mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel)
+
+    # Feather the edges by applying a Gaussian blur to the mask
+    blurred_mask = cv2.GaussianBlur(mask, (15, 15), 0)
+
+    # Create a 3-channel version of the mask to apply to both the foreground and background
+    blurred_mask_3ch = cv2.merge([blurred_mask, blurred_mask, blurred_mask])
+
+    # Normalize the mask to use for blending (convert to float and scale to [0, 1])
+    alpha = blurred_mask_3ch.astype(np.float32) / 255.0
+
+    # Use the mask to keep the original colors of the foreground (blended with alpha)
+    foreground = cv2.multiply(alpha, original_frame.astype(np.float32))
+
+    # Apply green background to the remaining areas
+    inverse_alpha = 1.0 - alpha
+    background = cv2.multiply(inverse_alpha, green_background.astype(np.float32))
+
+    # Combine the foreground and background
+    final_result = cv2.add(foreground, background)
+
+    # Convert the result back to uint8 for display
+    final_result = final_result.astype(np.uint8)
+
+    return final_result
+
+
+# Function to crop and display detected face
+def display_detected_face(frame, bbox):
+    """Crops the face based on bounding box and displays it in a separate window."""
+    x, y, w, h = [int(v) for v in bbox]
+    face_crop = frame[y:y + h, x:x + w]
+
+    # Resize the face crop for better visibility (optional)
+    face_crop_resized = cv2.resize(face_crop, (300, 300))
+
+    # Show the face in a new window
+    cv2.imshow("Detected Face", face_crop_resized)
+
 
 async def send_frame(websocket, frame):
     try:
@@ -162,20 +187,10 @@ async def websocket_loop():
             cv2.imshow("Original Feed", frame)
 
             # Background removal
-            background_image = cv2.imread("bg_image.jpeg")
-            if background_image is None:
-                print("Error: Background image not loaded.")
-                continue
+            segmentated_img = segmentor.removeBG(frame, (0, 0, 0))  # Remove the background
 
-            background_image = cv2.resize(background_image, (frame.shape[1], frame.shape[0]))
-            segmentated_img = segmentor.removeBG(frame, background_image)
-            frame = segmentated_img
-
-            # Enhance edges of the foreground
-            frame = enhance_edges(frame, background_image)
-
-            # Correct greenish tint
-            frame = correct_green_tint(frame)
+            # Apply green background to the frame
+            frame = apply_green_background(segmentated_img, frame)
 
             gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
@@ -191,6 +206,10 @@ async def websocket_loop():
                         cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 0, 255), 2)
                         cv2.putText(frame, f"ID {face_id} {emotion}", (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 0, 255), 2)
                         face_last_update[face_id] = get_current_time()
+
+                        # Display the cropped face in a separate window
+                        display_detected_face(frame, bbox)
+
                 else:
                     log_time_out(face_id)
                     face_ids_to_remove.append(face_id)
