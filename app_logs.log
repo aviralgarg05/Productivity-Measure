@@ -1,0 +1,144 @@
+2024-09-14 14:07:31,672 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:07:31,717 - INFO - Face ID 0 left. Time in: 2024-09-14 14:07:28, Time out: 2024-09-14 14:07:31. Duration: 3.0 seconds, Cumulative emotions: ['neutral'], Productivity: 70.0%
+2024-09-14 14:07:31,718 - ERROR - Error inserting face data: no such table: face_logs
+2024-09-14 14:07:32,626 - INFO - Face ID 0 detected emotion: sad
+2024-09-14 14:07:33,693 - INFO - Face ID 0 detected emotion: sad
+2024-09-14 14:07:35,381 - INFO - Face ID 0 detected emotion: sad
+2024-09-14 14:07:41,368 - INFO - Face ID 0 detected emotion: sad
+2024-09-14 14:07:42,097 - INFO - Face ID 1 detected emotion: happy
+2024-09-14 14:07:42,160 - INFO - Face ID 1 left. Time in: 2024-09-14 14:07:41, Time out: 2024-09-14 14:07:42. Duration: 1.0 seconds, Cumulative emotions: ['happy'], Productivity: 100%
+2024-09-14 14:07:42,161 - ERROR - Error inserting face data: no such table: face_logs
+2024-09-14 14:07:43,749 - INFO - Face ID 1 detected emotion: happy
+2024-09-14 14:07:45,879 - INFO - Face ID 1 detected emotion: happy
+2024-09-14 14:07:53,574 - INFO - Face ID 2 detected emotion: neutral
+2024-09-14 14:07:53,647 - INFO - Face ID 2 left. Time in: 2024-09-14 14:07:52, Time out: 2024-09-14 14:07:53. Duration: 1.0 seconds, Cumulative emotions: ['neutral'], Productivity: 70.0%
+2024-09-14 14:07:53,648 - ERROR - Error inserting face data: no such table: face_logs
+2024-09-14 14:08:01,629 - INFO - Face ID 3 detected emotion: angry
+2024-09-14 14:08:01,713 - INFO - Face ID 3 left. Time in: 2024-09-14 14:08:00, Time out: 2024-09-14 14:08:01. Duration: 1.0 seconds, Cumulative emotions: ['angry'], Productivity: 0%
+2024-09-14 14:08:01,714 - ERROR - Error inserting face data: no such table: face_logs
+2024-09-14 14:08:08,014 - INFO - Face ID 3 detected emotion: neutral
+2024-09-14 14:08:12,531 - INFO - Face ID 3 detected emotion: neutral
+2024-09-14 14:08:18,652 - INFO - Face ID 3 detected emotion: neutral
+2024-09-14 14:08:20,869 - INFO - Face ID 4 detected emotion: happy
+2024-09-14 14:08:20,964 - INFO - Face ID 4 left. Time in: 2024-09-14 14:08:20, Time out: 2024-09-14 14:08:20. Duration: 0.0 seconds, Cumulative emotions: ['happy'], Productivity: 100%
+2024-09-14 14:08:20,965 - ERROR - Error inserting face data: no such table: face_logs
+2024-09-14 14:08:21,976 - INFO - Face ID 1 detected emotion: happy
+2024-09-14 14:08:23,254 - INFO - Face ID 3 detected emotion: angry
+2024-09-14 14:08:24,052 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:08:25,272 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:08:28,201 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:08:29,613 - INFO - Face ID 5 detected emotion: neutral
+2024-09-14 14:08:30,588 - INFO - Face ID 5 detected emotion: neutral
+2024-09-14 14:08:31,579 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:08:31,580 - INFO - Face ID 5 left. Time in: 2024-09-14 14:08:28, Time out: 2024-09-14 14:08:30. Duration: 2.0 seconds, Cumulative emotions: ['neutral', 'neutral'], Productivity: 70.0%
+2024-09-14 14:08:31,581 - ERROR - Error inserting face data: no such table: face_logs
+2024-09-14 14:08:32,921 - INFO - Face ID 0 detected emotion: sad
+2024-09-14 14:08:34,156 - INFO - Face ID 6 detected emotion: neutral
+2024-09-14 14:12:15,866 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:12:16,726 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:12:17,449 - INFO - Face ID 0 detected emotion: angry
+2024-09-14 14:12:18,347 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:12:19,554 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:12:20,297 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:12:20,375 - INFO - Face ID 0 left. Time in: 2024-09-14 14:12:11, Time out: 2024-09-14 14:12:20. Duration: 9.0 seconds, Cumulative emotions: ['neutral', 'neutral', 'angry', 'neutral', 'neutral', 'neutral'], Productivity: 41.66666666666667%
+2024-09-14 14:12:20,376 - ERROR - Error inserting face data: no such table: face_logs
+2024-09-14 14:12:21,246 - INFO - Face ID 1 detected emotion: neutral
+2024-09-14 14:12:22,150 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:12:22,151 - INFO - Face ID 1 left. Time in: 2024-09-14 14:12:20, Time out: 2024-09-14 14:12:21. Duration: 1.0 seconds, Cumulative emotions: ['neutral'], Productivity: 70.0%
+2024-09-14 14:12:22,152 - ERROR - Error inserting face data: no such table: face_logs
+2024-09-14 14:12:22,998 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:12:24,070 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:12:25,152 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:12:26,068 - INFO - Face ID 2 detected emotion: neutral
+2024-09-14 14:12:27,293 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:12:27,293 - INFO - Face ID 2 left. Time in: 2024-09-14 14:12:25, Time out: 2024-09-14 14:12:26. Duration: 1.0 seconds, Cumulative emotions: ['neutral'], Productivity: 70.0%
+2024-09-14 14:12:27,296 - ERROR - Error inserting face data: no such table: face_logs
+2024-09-14 14:12:29,006 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:12:30,155 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:12:31,070 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:12:31,956 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:12:38,964 - INFO - Face ID 1 detected emotion: neutral
+2024-09-14 14:12:40,076 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:12:41,416 - INFO - Face ID 3 detected emotion: neutral
+2024-09-14 14:12:42,335 - INFO - Face ID 3 detected emotion: neutral
+2024-09-14 14:12:43,986 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:12:43,987 - INFO - Face ID 3 left. Time in: 2024-09-14 14:12:40, Time out: 2024-09-14 14:12:42. Duration: 2.0 seconds, Cumulative emotions: ['neutral', 'neutral'], Productivity: 70.0%
+2024-09-14 14:12:43,989 - ERROR - Error inserting face data: no such table: face_logs
+2024-09-14 14:12:45,040 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:12:45,987 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:12:46,814 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:12:47,813 - INFO - Face ID 2 detected emotion: neutral
+2024-09-14 14:12:48,843 - INFO - Face ID 1 detected emotion: sad
+2024-09-14 14:12:50,239 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:12:51,155 - INFO - Face ID 2 detected emotion: surprise
+2024-09-14 14:12:52,103 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:12:53,293 - INFO - Face ID 4 detected emotion: neutral
+2024-09-14 14:12:54,327 - INFO - Face ID 1 detected emotion: neutral
+2024-09-14 14:12:54,327 - INFO - Face ID 4 left. Time in: 2024-09-14 14:12:52, Time out: 2024-09-14 14:12:53. Duration: 1.0 seconds, Cumulative emotions: ['neutral'], Productivity: 70.0%
+2024-09-14 14:12:54,328 - ERROR - Error inserting face data: no such table: face_logs
+2024-09-14 14:12:55,297 - INFO - Face ID 1 detected emotion: neutral
+2024-09-14 14:12:56,099 - INFO - Face ID 1 detected emotion: neutral
+2024-09-14 14:12:56,817 - INFO - Face ID 1 detected emotion: neutral
+2024-09-14 14:12:57,542 - INFO - Face ID 5 detected emotion: angry
+2024-09-14 14:12:57,615 - INFO - Face ID 5 left. Time in: 2024-09-14 14:12:56, Time out: 2024-09-14 14:12:57. Duration: 1.0 seconds, Cumulative emotions: ['angry'], Productivity: 0%
+2024-09-14 14:12:57,616 - ERROR - Error inserting face data: no such table: face_logs
+2024-09-14 14:13:09,071 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:13:10,301 - INFO - Face ID 6 detected emotion: neutral
+2024-09-14 14:26:24,849 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:26:25,893 - INFO - Face ID 0 detected emotion: sad
+2024-09-14 14:26:26,865 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:26:27,703 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:26:28,428 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:26:29,305 - INFO - Face ID 1 detected emotion: neutral
+2024-09-14 14:26:29,307 - INFO - Face ID 0 left. Time in: 2024-09-14 14:26:18, Time out: 2024-09-14 14:26:28. Duration: 10.0 seconds, Cumulative emotions: ['neutral', 'sad', 'neutral', 'neutral', 'neutral'], Productivity: 46.0%
+2024-09-14 14:26:29,310 - INFO - Inserted face data for Face ID 0 into CSV file.
+2024-09-14 14:26:30,124 - INFO - Face ID 2 detected emotion: neutral
+2024-09-14 14:26:30,124 - INFO - Face ID 1 left. Time in: 2024-09-14 14:26:28, Time out: 2024-09-14 14:26:29. Duration: 1.0 seconds, Cumulative emotions: ['neutral'], Productivity: 70.0%
+2024-09-14 14:26:30,127 - INFO - Inserted face data for Face ID 1 into CSV file.
+2024-09-14 14:26:30,999 - INFO - Face ID 3 detected emotion: neutral
+2024-09-14 14:26:30,999 - INFO - Face ID 2 left. Time in: 2024-09-14 14:26:29, Time out: 2024-09-14 14:26:30. Duration: 1.0 seconds, Cumulative emotions: ['neutral'], Productivity: 70.0%
+2024-09-14 14:26:31,002 - INFO - Inserted face data for Face ID 2 into CSV file.
+2024-09-14 14:26:32,377 - INFO - Face ID 3 detected emotion: neutral
+2024-09-14 14:26:33,720 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:26:33,721 - INFO - Face ID 3 left. Time in: 2024-09-14 14:26:30, Time out: 2024-09-14 14:26:32. Duration: 2.0 seconds, Cumulative emotions: ['neutral', 'neutral'], Productivity: 70.0%
+2024-09-14 14:26:33,724 - INFO - Inserted face data for Face ID 3 into CSV file.
+2024-09-14 14:26:34,963 - INFO - Face ID 4 detected emotion: neutral
+2024-09-14 14:26:36,135 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:26:36,135 - INFO - Face ID 4 left. Time in: 2024-09-14 14:26:33, Time out: 2024-09-14 14:26:35. Duration: 2.0 seconds, Cumulative emotions: ['neutral'], Productivity: 70.0%
+2024-09-14 14:26:36,139 - INFO - Inserted face data for Face ID 4 into CSV file.
+2024-09-14 14:26:37,140 - INFO - Face ID 2 detected emotion: neutral
+2024-09-14 14:26:38,092 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:26:39,003 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:26:39,983 - INFO - Face ID 4 detected emotion: neutral
+2024-09-14 14:26:41,315 - INFO - Face ID 0 detected emotion: surprise
+2024-09-14 14:26:42,529 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:26:43,816 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:26:44,864 - INFO - Face ID 0 detected emotion: surprise
+2024-09-14 14:26:52,111 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:26:53,062 - INFO - Face ID 5 detected emotion: neutral
+2024-09-14 14:26:54,302 - INFO - Face ID 5 detected emotion: neutral
+2024-09-14 14:26:55,489 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:26:55,490 - INFO - Face ID 5 left. Time in: 2024-09-14 14:26:52, Time out: 2024-09-14 14:26:54. Duration: 2.0 seconds, Cumulative emotions: ['neutral', 'neutral'], Productivity: 70.0%
+2024-09-14 14:26:55,496 - INFO - Inserted face data for Face ID 5 into CSV file.
+2024-09-14 14:26:56,935 - INFO - Face ID 3 detected emotion: neutral
+2024-09-14 14:26:58,475 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:26:59,861 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:27:00,804 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:27:02,077 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:27:03,131 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:27:04,032 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:27:05,042 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:27:06,009 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:27:06,986 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:27:07,841 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:27:08,642 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:27:09,676 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:27:10,399 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:27:11,236 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:27:12,365 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:27:13,437 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:27:14,445 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:27:15,333 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:27:16,478 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:27:17,398 - INFO - Face ID 0 detected emotion: neutral
+2024-09-14 14:27:18,359 - INFO - Face ID 0 detected emotion: neutral
